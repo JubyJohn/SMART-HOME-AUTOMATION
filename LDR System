@@ -1,0 +1,115 @@
+int AutoMode();
+int ManualMode();
+void setup() 
+{
+  Serial.begin(9600);
+  pinMode(D4,OUTPUT);
+  Serial.println("SMART HOME");
+  Serial.println(" a) Auto Mode \t\t b) Manual Mode \t\t c) exit");
+  Serial.println("Choose Your option.....");
+}
+
+void loop() 
+{
+  if(Serial.available())
+  {
+    char y;
+    y=Serial.read();
+    
+        if(y=='a')
+        {
+        AutoMode();
+        Serial.println("SMART HOME");
+        Serial.println(" a) Auto Mode \t\t b) Manual Mode \t\t c) exit");
+        Serial.println("Choose Your option.....");
+        }
+       if(y=='b')
+        {
+       ManualMode();
+       Serial.println("SMART HOME");
+      Serial.println(" a) Auto Mode \t\t b) Manual Mode \t\t c) exit");
+      Serial.println("Choose Your option.....");
+         }
+       
+  }
+}
+
+int AutoMode()
+{ 
+  Serial.println("Auto Mode Activated");
+  while(1)
+  {
+     if(analogRead(A0)<400)
+       {
+        Serial.println(" DAY TIME - LED OFF ");
+        digitalWrite(D4,HIGH);
+       
+             while(analogRead(A0)<400)
+             {
+                if(Serial.available())
+              {
+                char y;
+                y=Serial.read();
+                if (y=='c')
+                {
+                  return 0;
+                }
+              } 
+             
+               delay(10); 
+             }
+       }
+      else if(analogRead(A0)>400)
+       {
+        Serial.println(" NIGHT TIME - LED ON ");
+        digitalWrite(D4,LOW);
+        delay(100);
+             while(analogRead(A0)>400)
+             {
+               char y;
+               if(Serial.available())
+              {
+                y=Serial.read();
+                if (y=='c')
+                {
+                  return 0;
+                }
+             } 
+               delay(10); 
+             }
+       }
+  }
+}
+
+int ManualMode()
+{
+       Serial.println("Manual Mode Activated");
+       Serial.println("Type - a for LED ON \t\t Type - b for LED OFF");
+  while(1)
+  {
+    if(Serial.available())
+     {
+      char y;
+      y=Serial.read();
+               if(y=='a')
+                 {
+                  Serial.println("LED ON");
+                  digitalWrite(D4,LOW);
+                   delay(100); 
+                 }
+               else if(y=='b')
+                 {
+                  Serial.println("LED OFF");
+                 digitalWrite(D4,HIGH);
+                   delay(100);
+                 }
+              else if (y=='c')
+                {
+                  return 0;
+                }
+      }
+  }
+  
+}
+  
+                  
