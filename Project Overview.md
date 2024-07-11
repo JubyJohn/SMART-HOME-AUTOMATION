@@ -46,22 +46,22 @@ You need to add "return 0" instead your loop to get outside when it gets data ot
 
 ## OUTPUT
 
-On serial monitor , when RST button of ESP8266 pressed prints
-SMART HOME
-a) Auto Mode       b) Manual Mode      	 c) exit 
-Choose Your option....
-Type -> a
-Auto Mode Activated
-DAY TIME - LED OFF       // when light is detected by LDR, LED turned OFF
-NIGHT TIME - LED ON   // when no light is detected by LDR, LED turned ON
-Type -> c
-SMART HOME
-a) Auto Mode       b) Manual Mode      	 c) exit 
-Choose Your option......
-Type -> b
-Manual Mode Activated
-Type -> a for LED ON         Type -> b for LED OFF
-Type -> c
-SMART HOME
-a) Auto Mode       b) Manual Mode      	 c) exit 
-Choose Your option......
+<br> On serial monitor , when RST button of ESP8266 pressed prints
+<br> SMART HOME
+<br> a) Auto Mode       b) Manual Mode      	 c) exit 
+<br> Choose Your option....
+<br> Type -> a
+<br> Auto Mode Activated
+<br> DAY TIME - LED OFF       // when light is detected by LDR, LED turned OFF
+<br> NIGHT TIME - LED ON   // when no light is detected by LDR, LED turned ON
+<br> Type -> c
+<br> SMART HOME
+<br> a) Auto Mode       b) Manual Mode      	 c) exit 
+<br> Choose Your option......
+<br> Type -> b
+<br> Manual Mode Activated
+<br> Type -> a for LED ON         Type -> b for LED OFF
+<br> Type -> c
+<br> SMART HOME
+<br> a) Auto Mode       b) Manual Mode      	 c) exit 
+<br> Choose Your option......
