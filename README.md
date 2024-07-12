@@ -65,3 +65,8 @@ You need to add "return 0" instead your loop to get outside when it gets data ot
 <br> SMART HOME
 <br> a) Auto Mode       b) Manual Mode      	 c) exit 
 <br> Choose Your option......
+
+![HARDWARE](https://github.com/user-attachments/assets/988630d3-d514-46b6-8db1-f8d06a7799f9)
+
+
+
