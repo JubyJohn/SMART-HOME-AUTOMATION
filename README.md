@@ -69,4 +69,8 @@ You need to add "return 0" instead your loop to get outside when it gets data ot
 ![HARDWARE](https://github.com/user-attachments/assets/988630d3-d514-46b6-8db1-f8d06a7799f9)
 
 
+![SOFTWARE](https://github.com/user-attachments/assets/171e955e-6391-486e-a033-7f58cb0758d5)
+
+
+
 
